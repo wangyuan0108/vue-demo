@@ -1,28 +1,25 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <hello></hello>
+    <v-header></v-header>
+    <div class="tab">
+      I am header
+    </div>
+    <div class="content">
+      I am header
+    </div>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+  import header from './components/header/header.vue';
 
-export default {
-  name: 'app',
-  components: {
-    Hello
-  }
-}
+  export default {
+    components: {
+      'v-header': header
+    }
+  };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
