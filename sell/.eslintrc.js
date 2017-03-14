@@ -26,6 +26,7 @@ module.exports = {
     //分号配置
     'semi':['error','always'],
     //缩进配置
-    'indent':0
+    'indent':0,
+    'space-before-function-paren':0
   }
 }
