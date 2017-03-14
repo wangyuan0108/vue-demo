@@ -2,15 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Axios from 'axios';
 import App from './App';
 import goods from './components/goods/goods.vue';
 import ratings from './components/ratings/ratings.vue';
 import seller from './components/seller/seller.vue';
 import './common/stylus/index.styl';
+import axios from 'axios';
+Vue.prototype.$http = axios;
 
 Vue.use(VueRouter);
-Vue.use(Axios);
 
 Vue.config.productionTip = false;
 
