@@ -17,8 +17,16 @@
           <span class="text">{{ seller.supports[0].description }}</span>
         </div>
       </div>
+      <div v-if="seller.supports" class="support-count">
+        <span class="count">{{ seller.supports.length }}个</span>
+        <i class="icon-keyboard_arrow_right"></i>
+      </div>
     </div>
-    <div class="bulletin-wrapper"></div>
+    <div class="bulletin-wrapper">
+      <span class="bulletin-title"></span>
+      <span class="bulletin-text">{{seller.bulletin}}</span>
+      <i class="icon-keyboard_arrow_right"></i>
+    </div>
   </div>
 </template>
 
@@ -39,8 +47,9 @@
   @import "../../common/stylus/mixin.styl";
   .header
     color: #ffffff
-    background: #000000
+    background: #999
     .content-wrapper
+      position: relative
       padding: 24px 12px 18px 24px
       font-size: 0
       .avatar
@@ -92,5 +101,30 @@
               bg-image('special_1')
           .text
             line-height: 12px
-            font-size: 12px
+            font-size: 10px
+      .support-count
+        position: absolute
+        right: 12px
+        bottom: 14px
+        padding: 0 8px
+        height: 24px
+        line-height: 24px
+        -webkit-border-radius: 14px
+        -moz-border-radius: 14px
+        border-radius: 14px
+        background: rgba(0, 0, 0, 0.2)
+        text-align: center
+        .count
+          font-size: 10px
+        .icon-keyboard_arrow_right
+          margin-left: 2px
+          line-height: 24px
+          font-size: 10px
+    .bulletin-wrapper
+      height: 28px
+      line-height: 28px
+      padding: 0 22px 0 12px
+      white-space: nowrap
+      overflew: hidden
+      text-overflow: ellipsis
 </style>
